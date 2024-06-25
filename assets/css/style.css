@@ -240,6 +240,7 @@ nav {
     display:flex;
     justify-content:center;
     align-items:center;
+    flex-direction:column;
 }
 
 .image-section-4{
@@ -491,6 +492,52 @@ article{
     width: 100%;
 } */
 
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width:100%;
+    height: auto;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-slide {
+    flex: 0 0 300px; /* Largeur de chaque slide */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-slide img {
+    width: 300px;
+    margin:0px 50px;
+    height: auto !important;
+}
+
+.slider-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.slider-pagination span {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-pagination span.active {
+    background: red;
+}
+
 .contact{
     background-image:url(../images/bg-s3.png);
     padding:20px 0px 45px 0px;
@@ -717,6 +764,14 @@ article{
         border-radius:30px;
     }
 
+    .discover{
+        position: absolute;
+        left:5%;
+        background-color:black;
+        padding:10px 20px;
+        color:white;
+    }
+
 /* Responsive Styles */
 @media (max-width: 1200px) {
     header{
@@ -867,6 +922,16 @@ article{
         width: 85%;
     }
 
+    .slider-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        padding:15px 0px;
+    }
+
+    .slider-container h3{
+        padding:20px 0px!important;
+    }
+
 }
 
 @media (max-width: 992px) {
@@ -944,6 +1009,11 @@ article{
         height:90vh;
         background-size:cover !important;
         object-fit:cover !important;
+    }
+
+    .slider-container h3{
+        padding:20px 0px!important;
+        font-size:40px;
     }
 }
 
@@ -1131,36 +1201,3 @@ article{
         background-size:cover !important;
     }
 }
-
-.whatsapp_float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: #25d366;
-    color: #fff;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;
-  }
-  .whatsapp-icon {
-    margin-top: 16px;
-  }
-  
-  /* for mobile */
-  @media screen and (max-width: 767px){
-    .whatsapp-icon {
-      margin-top: 10px;
-    }
-    .whatsapp_float {
-      width: 40px;
-      height: 40px;
-      bottom: 20px;
-      right: 10px;
-      font-size: 22px;
-    }
-  }
-  
