@@ -120,11 +120,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fonction pour ajuster le nombre de slides et de points de pagination en fonction de la largeur de l'écran
     function adjustSliderForScreenSize() {
         if (window.matchMedia("(max-width: 768px)").matches) {
-            slidesPerPage = 5; // Pour mobile, ajuster le nombre de slides visibles
-            createPagination(6); // Pour mobile, créer 7 points de pagination
+            slidesPerPage = 1; // Pour mobile, ajuster le nombre de slides visibles
+            createPagination(4); // Pour mobile, créer 7 points de pagination
         } else {
-            slidesPerPage = 3; // Pour desktop, ajuster le nombre de slides visibles
-            createPagination(4); // Pour desktop, créer 4 points de pagination
+            slidesPerPage = 4; // Pour desktop, ajuster le nombre de slides visibles
+            //createPagination(4); // Pour desktop, créer 4 points de pagination
         }
         pageCount = Math.ceil(slideCount / slidesPerPage);
 
