@@ -500,6 +500,7 @@ article{
 }
 
 .slider-wrapper {
+    align-items: center;
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
@@ -515,6 +516,10 @@ article{
     width: 300px;
     margin:0px 50px;
     height: auto !important;
+}
+
+#orbis{
+    height : 150px;
 }
 
 .slider-pagination {
@@ -924,6 +929,7 @@ article{
 
     .slider-wrapper {
         display: flex;
+        align-items: center;
         transition: transform 0.5s ease-in-out;
         padding:15px 0px;
     }
@@ -1129,6 +1135,42 @@ article{
         margin: .7rem 0px;
         border: 0.2rem solid #334;
       }
+}
+@media (max-width: 767.98px) {
+    .nav-link {
+        font-size: 16px;
+        margin: 0 20px;
+    }
+
+    .title, .paragraph {
+        font-size: 24px;
+    }
+
+    .button {
+        padding: 5px 10px;
+    }
+
+    .bg-image {
+        height: 70vh;
+    }
+
+    .transformation {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .paragraph-2 {
+        font-size: 28px;
+        width: 80%;
+    }
+
+    .description, .client {
+        font-size: 16px;
+    }
+
+    .img-reviews {
+        width: 120px;
+    }
 }
 
 @media (max-width: 576px) {

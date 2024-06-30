@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
             createPagination(4); // Pour mobile, créer 7 points de pagination
         } else {
             slidesPerPage = 4; // Pour desktop, ajuster le nombre de slides visibles
-            //createPagination(4); // Pour desktop, créer 4 points de pagination
+            createPagination(5); // Pour desktop, créer 4 points de pagination
         }
         pageCount = Math.ceil(slideCount / slidesPerPage);
 
