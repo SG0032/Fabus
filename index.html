@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Custom CSS file link -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- favicon -->
     <link rel="icon" href="assets/images/fabus_fav.png" type="image/x-icon">
 </head>
@@ -134,7 +135,7 @@
         <section class="section-5" id="galerie">
             <h3 class="galerie-text">Galerie</h3>
             <article>
-                <div class="i-left">
+                <div id="icon-left" class="i-left">
                     <i class="fa-solid fa-chevron-left" id="prevBtn"></i>
                 </div>
                 <div class="box-gallerie">
@@ -148,7 +149,7 @@
                     <img class="galerie" src="./assets/images/g-img8.jpg" alt="section-5">
                     <img class="galerie" src="./assets/images/g-img9.jpg" alt="section-5">
                 </div>
-                <div class="i-right">
+                <div  id="icon-right" class="i-right">
                     <i class="fa-solid fa-chevron-right" id="nextBtn"></i>
                 </div>
             </article>
@@ -195,36 +196,42 @@
             <!-- Start Section reviews -->
             <div class="slider-container">
                 <h3>Ils nous font confiance</h3>
+                <div class="icons-left">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
                 <div class="slider-wrapper">
-                    <div class="slider-slide">
-                        <img src="./assets/images/indh-logo.png" alt="indh-logo" />
-                    </div>
-                    <div class="slider-slide">
-                        <img src="./assets/images/Italcar_logo.jpg" alt="Italcar_logo" />
-                    </div>
-                    <div class="slider-slide">
-                        <img src="./assets/images/logo_oncf.png" alt="ONCF" />
-                    </div>
                     <div class="slider-slide">
                         <img src="./assets/images/logo_tmpa.png" alt="logo_tmpa" />
                     </div>
                     <div class="slider-slide">
-                        <img src="./assets/images/ORBIS-AUTO-LOGO.png" alt="renault" id="orbis"/>
+                        <img id="italcar" src="./assets/images/Italcar_logo.jpg" alt="Italcar_logo" />
                     </div>
                     <div class="slider-slide">
-                        <img src="./assets/images/ALD_Automotive.png" alt="STELLANTIS" />
+                        <img id="oncf" src="./assets/images/logo_oncf (2).png" alt="ONCF" />
                     </div>
                     <div class="slider-slide">
-                        <img src="./assets/images/ministere_de_la_sante.png" alt="STELLANTIS" />
+                        <img id="ald" src="./assets/images/ALD_Automotive.png" alt="ALD_Automotive" />
                     </div>
                     <div class="slider-slide">
-                        <img src="./assets/images/surete_nationale_maroc.png" alt="STELLANTIS" />
+                        <img id="indh" src="./assets/images/indh-logo.png" alt="indh-logo" />
                     </div>
                     <div class="slider-slide">
-                        <img src="./assets/images/La_continentale.png" alt="La_continentale" />
+                        <img id="continentale" src="./assets/images/La_continentale.png" alt="La_continentale" />
                     </div>
+                    <div class="slider-slide">
+                        <img id="obus" src="./assets/images/ORBIS-AUTO-LOGO (3).png" alt="ORBIS" />
+                    </div>
+                    <div class="slider-slide">
+                        <img id="sante" src="./assets/images/ministere_de_la_sante (1).png" alt="Ministere_de_sante_Maroc" />
+                    </div>
+                    <div class="slider-slide">
+                        <img id="police" src="./assets/images/surete_nationale_maroc.png" alt="Surete_Nationale_Maroc" />
+                    </div>
+
                 </div>
-                <div class="slider-pagination"></div>
+                <div class="icons-right">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
             </div>
             <!-- End Section reviews -->
         </section>  
@@ -290,8 +297,7 @@
                     <input type="submit" value="subscribe" class="subscribe">
                 </form> -->
                 <div class="share">
-                    <a href="https://www.linkedin.com/company/fabus-carrosserie/" class="fab fa-linkedin"></a>
-                    <!-- <a href="#" class="fab fa-facebook-f"></a> -->
+                    <a href="https://www.linkedin.com/company/fabuscarrosserie/" class="fab fa-linkedin"></a>
                     <a href="https://www.instagram.com/fabus.sarl/" class="fab fa-instagram"></a>
                     <a href="https:/wa.me/212641341841" class="fab fa-whatsapp"></a>
                 </div>
@@ -303,5 +309,73 @@
     <!-- end services -->
     <!-- custom js file link -->
     <script src="assets/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                var slideIndex = 0;
+                var totalSlides = $('.slider-slide').length;
+                var maxIndex = totalSlides - 1;
+            
+
+                function showSlide(index) {
+                    if ($(window).width() <= 768) {
+                    var newLeft = -index * 100 + '%';
+                           $('.slider-wrapper').css('transform', 'translateX(' + newLeft + ')');
+                    } else {
+                        if (index >= 0 && index <= 2) {
+                            var newLeft = -index * 100 + '%';
+                            $('.slider-wrapper').css('transform', 'translateX(' + newLeft + ')');
+                        } else if (index > 2) {
+                            // Si l'index dépasse 3, revenir à 0
+                            var newIndex = 0;
+                            var newLeft = -newIndex * 100 + '%';
+                            $('.slider-wrapper').css('transform', 'translateX(' + newLeft + ')');
+                        }
+                    }
+                }
+
+                function nextSlide() {
+                    slideIndex = (slideIndex + 1) > maxIndex ? 0 : slideIndex + 1;
+                    showSlide(slideIndex);
+                }
+            
+                function prevSlide() {
+                    slideIndex = (slideIndex - 1) < 0 ? maxIndex : slideIndex - 1;
+                    showSlide(slideIndex);
+                }
+            
+                function getSlidesPerPage() {
+                    // Définir le nombre d'images par groupe en fonction de la taille de l'écran
+                    return window.innerWidth >= 768 ? 3 : 1;
+                }
+            
+                $('.icons-right').click(nextSlide);
+                $('.icons-left').click(prevSlide);
+            
+                setInterval(nextSlide, 5000); // Change slide every 3 seconds
+            
+                // Initialiser Hammer.js pour la gestion des gestes de glissement
+                var slider = document.querySelector('.slider-wrapper');
+                var hammer = new Hammer(slider);
+            
+                hammer.on('swipeleft', function() {
+                    nextSlide();
+                });
+            
+                hammer.on('swiperight', function() {
+                    prevSlide();
+                });
+            
+                // Appel initial de showSlide avec le nombre de slides par page actuel
+                showSlide(slideIndex);
+                
+                // Mise à jour du nombre de slides par page lors du redimensionnement de la fenêtre
+                $(window).resize(function() {
+                    slidesPerPage = getSlidesPerPage();
+                    maxIndex = Math.ceil(totalSlides / slidesPerPage) - 1;
+                    showSlide(slideIndex); // Rafraîchir l'affichage avec le bon nombre de slides par page
+                });
+            });
+        </script>            
 </body>
 </html>
