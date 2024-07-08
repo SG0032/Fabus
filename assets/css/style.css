@@ -187,14 +187,14 @@ nav {
     justify-content:center !important;
     align-items:center !important;
     padding:20px 0px 0px 0px;
-    font-size:20px;
+    font-size:28px;
 }
 
 .description{
     display:flex !important;
     justify-content:center !important;
     align-items:center !important;
-    font-size:20px;
+    font-size:18px;
     font-weight:600 !important;
     color:white !important;
     margin:30px 0px 30px 0px !important;
@@ -203,7 +203,7 @@ nav {
 .description-2{
     display:flex;
     justify-content:center !important;
-    font-size:20px;
+    font-size:16px;
     color:rgb(179, 167, 167);
 }
 
@@ -1126,7 +1126,7 @@ article{
     }
 
     .description{
-        font-size:16px;
+        font-size:18px;
     }
 
     .close{
@@ -1220,7 +1220,7 @@ article{
     }
 
     .description{
-        font-size:14px;
+        font-size:16px;
     }
 
     nav{
@@ -1301,7 +1301,7 @@ article{
         width: 80%;
     }
 
-    .description, .client {
+    .description{
         font-size: 16px;
     }
 
