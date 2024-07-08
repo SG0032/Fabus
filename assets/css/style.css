@@ -618,12 +618,12 @@ article{
 }
 
 #police{
-    width:60%;
+    width:40%;
     height:auto !important;
 }
 
 #continentale{
-    width:60%;
+    width:70%;
     height:auto !important;
 }
 
@@ -639,11 +639,11 @@ article{
 }
 
 #obus{
-    width:30%;
+    width:40%;
 }
 
 #ald{
-    width:90%;
+    width:60%;
 }
 
 .contact{
@@ -886,6 +886,18 @@ article{
     }
 
     #italcar{
+        width:60%;
+        height:auto;
+    }
+    #ultranet{
+        width:60%;
+        height:auto;
+    }
+    #renault{
+        width:50%;
+        height:auto;
+    }
+    #stellantis{
         width:60%;
         height:auto;
     }

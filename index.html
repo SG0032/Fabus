@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabus Carrosserie - Expert en Transformation de Véhicules Utilitaires</title>
+    <title>Fabus - Expert en Transformation de Véhicules Utilitaires</title>
     <meta name="description" content="Fabus Carrosserie offre des services de transformation sur mesure pour vos véhicules utilitaires.">
     <meta name="keywords" content="carrosserie, transformation de véhicules, véhicules utilitaires, fabus carrosserie">
-    <meta property="og:title" content="Fabus Carrosserie - Expert en Transformation de Véhicules Utilitaires">
+    <meta property="og:title" content="Fabus - Expert en Transformation de Véhicules Utilitaires">
     <meta property="og:description" content="Fabus Carrosserie offre des services de transformation sur mesure pour vos véhicules utilitaires.">
     <!-- TODO -->
     <meta property="og:image" content="URL_TO_IMAGE">
@@ -117,14 +117,15 @@
             <div class="flexbox">
                 <p style="text-align:center;" class="paragraph-2">Votre alié dans la transformation <span style="font-weight:500;">sur-mesure</span> de vos véhicules utilitaires</p>
             </div>
-            <h4 class="flexbox client">Nos Clients :</h4>
-            <p class="description">CONSTRUCTEURES.CONSESSIONNAIRES.PROFESSIONELS.COLLECTIVITES.PARTICULIERS</p>
-            <span class="description-2">Nos valeures sont des guides précieux</span>
-            <span class="description-2">Notre agilite nous permet de nous adapter aux exigences de nos clients</span>
-            <span class="description-2">Notre creativité nous conduit a encourager l'esprit d' initiative de nos collaboratuers ,afin de mieux servir nos clients</span>
+            <h3 class="flexbox client">Nos Clients :</h3>
+            <p class="description">CONSTRUCTEURES - CONSESSIONNAIRES - PROFESSIONELS - COLLECTIVITES - PARTICULIERS</p>
+            <span class="description-2">Nos valeures sont des guides précieux</span> <br>
+            <span class="description-2">Notre agilite nous permet de nous adapter aux exigences de nos clients</span><br>
+            <span class="description-2">Notre creativité nous conduit a encourager l'esprit d' initiative de nos collaboratuers, afin de mieux servir nos clients</span> <br>
             <span class="description-2">Nous sommes pleinement mobilisé sur nos priorités</span>
         </section>
         <section class="show-image" id="services">
+            <!-- description image -->
             <img class="img-1" src="./assets/images/img-4.png" alt="">
             <img class="img-1" src="./assets/images/img-1.png" alt="">
             <img class="img-1" src="./assets/images/img-3.png" alt="">
@@ -207,6 +208,9 @@
                         <img id="italcar" src="./assets/images/Italcar_logo.jpg" alt="Italcar_logo" />
                     </div>
                     <div class="slider-slide">
+                        <img id="ultranet" src="./assets/images/Ultranet_Multimedia.png" alt="ultranet_multimedia" />
+                    </div>
+                    <div class="slider-slide">
                         <img id="oncf" src="./assets/images/logo_oncf (2).png" alt="ONCF" />
                     </div>
                     <div class="slider-slide">
@@ -226,6 +230,12 @@
                     </div>
                     <div class="slider-slide">
                         <img id="police" src="./assets/images/surete_nationale_maroc.png" alt="Surete_Nationale_Maroc" />
+                    </div>
+                    <div class="slider-slide">
+                        <img id="renault" src="./assets/images/Renault_logo.png" alt="Renault" />
+                    </div>
+                    <div class="slider-slide">
+                        <img id="stellantis" src="./assets/images/STELLANTIS.png" alt="Stellantis" />
                     </div>
 
                 </div>
@@ -286,7 +296,7 @@
                 <a href="tel:+212520608096" class="link"> <i class="fas fa-phone"></i> +212-520-608096 </a>
                 <a href="tel:+212641341841" class="link"> <i class="fas fa-phone"></i> +212-641-341841 </a>
                 <a href="mailto:contact@fabuscarrosserie.com" class="link"> <i class="fas fa-envelope"></i> contact@fabuscarrosserie.com </a>
-                <a href="#" class="link"> <i class="fas fa-map"></i> Casablanca </a>
+                <a href="#" class="link" onclick="return false;"> <i class="fas fa-map"></i> Casablanca </a>
             </div>
             <div class="box">
                 <!-- <h3>Nous Contacter</h3> -->
@@ -322,10 +332,10 @@
                     var newLeft = -index * 100 + '%';
                            $('.slider-wrapper').css('transform', 'translateX(' + newLeft + ')');
                     } else {
-                        if (index >= 0 && index <= 2) {
+                        if (index >= 0 && index <= 3) {
                             var newLeft = -index * 100 + '%';
                             $('.slider-wrapper').css('transform', 'translateX(' + newLeft + ')');
-                        } else if (index > 2) {
+                        } else if (index > 3) {
                             // Si l'index dépasse 3, revenir à 0
                             var newIndex = 0;
                             var newLeft = -newIndex * 100 + '%';
